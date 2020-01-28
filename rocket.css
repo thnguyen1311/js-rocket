@@ -1,3 +1,8 @@
+body{
+    overflow: hidden; 
+    font-family: 'Loved by the King', cursive;
+    letter-spacing: 3.5px;
+}
 .left{
     background-color: aquamarine;
     position: fixed;
@@ -5,6 +10,9 @@
     height:100%;
     top:0;
     left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .right{
@@ -15,11 +23,17 @@
     right:0;
     top:0;
 }
-
+.right .state1,
+.right .state2,
+.right .state3,
+.right .state4,
+.right .state5{
+    visibility: hidden;
+}
 .ground{
-    background-color:#7ab77a;
+    background:url("img/ground.png");
     position: absolute;
-    bottom:0;
+    bottom:10px;
     left:0;
     width:100%;
     height:20px;
@@ -28,14 +42,52 @@
     position: absolute;
     left:50%;
     bottom:20px;
-    width:20px;
-    height:100px;
-    background-color: #e9f5f8;
-    transition: bottom 10000ms;
+    width:143px;
+    height: 272px;
+    transform: translateX(-50%);
+    background:url(img/rocket-state1.png) no-repeat;
+    margin-bottom: -31px;
+    transition: bottom 7s;
+}
+body.body-state1 .rocket{
+    background:url(img/rocket-state1.png) no-repeat;
+    transition: bottom 1s;
+}
+body.body-state2 .rocket{
+    background:url(img/rocket-state2.gif) no-repeat;
+}
+body.body-state5 .rocket{
+    width: 209px;
+    height:200px;
+    background:url(img/boom.png) no-repeat;
+    transition:bottom 3s;
 }
 body.body-state3 .rocket,
 body.body-state4 .rocket{
-    bottom:1000px;
+    background:url(img/rocket-state3.gif) no-repeat;
+    bottom:1050px;
+}
+.nervous.show{
+    position: absolute;
+/*    left:120px;*/
+/*to make sure that the text stay put at the place where it's supposed to be you can't use pixel like above 'cause once the screen size change, its place will change accordingly
+    => and you cant use % other than 50% (this's like we use margin: 0 auto to set the element to the center, but here we cant use margin 'cause we are having position:absolute) cause its place wont be the same*/
+/*    to make its position unchanged => left: 50%, and reposition it with transform: translate()*/
+    left: 50%;
+    bottom:220px;
+    width:223px;
+    height: 100px;
+    transform: translateX(-83%);
+    background:url(img/nervous.png) no-repeat;
+}
+.cant-wait.show{
+    position: absolute;
+    left:50%;
+    bottom:227px;
+    width:206px;
+    height: 65px;
+    transform: translateX(-12%);
+    background:url(img/cant-wait.png) no-repeat;
 }
 .state1,
 .state2,
@@ -49,11 +101,46 @@ body.body-state2 .state2{display:block;}
 body.body-state3 .state3{display:block;}
 body.body-state4 .state4{display:block;}
 body.body-state5 .state5{display:block;}
+.text{
+    text-align: center;
+    transform: translateY(-10%);
+}
+.text h1{
+    font-size: 65px;
+    margin-bottom: 10px;
+}
 a{
+    text-decoration: none;
+    font-size: 40px;
+    color: #2f5e9b;
+}
+@media screen and (min-width:500px){
+    .left{
+        visibility: hidden;
+    }
+    .right{
+        width:100%;
+    }
+    .right .text{
+        visibility: visible;
+        margin-top: 100px;
+    }
+    .text h1{
+        margin-bottom: -10px;
+    }
+}
+@media screen and (min-width:960px){
+    .left{
+        visibility: visible;
+    }
+    .right{
+        width:50%;
+    }
+    .right .text{
+        visibility: hidden;
+    }
     
 }
-
-
 
 
 

@@ -157,7 +157,7 @@ a{
         transform: translateX(-25%);
     }
 }
-@media screen and (min-width:768px){
+@media screen and (min-width:500px){
     body.body-state1 .rocket,
     body.body-state2 .rocket,
     body.body-state3 .rocket,
@@ -169,7 +169,7 @@ a{
     }
     .right .text h1{
     margin-top: 20px; 
-    font-size: 70px;
+    font-size: 65px;
     margin-bottom: 10px;
     }
     a{
@@ -188,7 +188,7 @@ a{
         transform: translateX(-12%);
     }
 }
-@media screen and (min-width:776px){
+@media screen and (min-width:972px){
     .left{
         visibility: visible;
     }

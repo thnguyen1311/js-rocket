@@ -8,6 +8,9 @@ var doCoolStuff = function(){
     }
 } 
 
+var disappear = setTimeout(function(){
+    location.href="rocket.html";
+},5000);
 
 var car ={
             make: 'VW',

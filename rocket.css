@@ -112,7 +112,8 @@ body.body-state5 .state5{display:block;}
 a{
     text-decoration: none;
     font-size: 40px;
-    color: #2f5e9b;
+    color: #4f4ebe;
+    font-weight: bold;
 }
 @media screen and (min-width:500px){
     .left{

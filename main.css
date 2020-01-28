@@ -1,19 +1,48 @@
 body{
-    background-color: grey;
+height:100vh;
+  width:100vw;
+    text-align: center;
+  background-image: linear-gradient(44deg,#5d5cbe,#6cf7d7);
+  background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Loved by the King', cursive;
+    letter-spacing: 3.5px;
+    overflow: hidden;
+}
+h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    font-size:30px;
+    transition: visibility 1s ease;
+    color: #4f4ebe;
+    font-weight:bold;
+    animation: up-down 2s infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes up-down{
+    from{
+        color: #6c6cb7;
+    }
+    50%{
+        color:#4f4ebe;
+    }
+    100%{
+        color: #262491;
+    }
 }
 
-.cool{
-/*    display: none;*/
-/*    display is not a transition so we cannot set a transition effect on it, instead of that we use visibility to achieve the same effect*/
-    visibility: hidden;
-    width: 100px;
-    height: 100px;
-    background-color: green;
-    transition: background-color 1s ease, visibility 1s ease;
+@media screen and (min-width: 500px){
+    h1{
+        font-size:45px;
+    }
 }
-
-.cool.red{
-/*    display: block;*/
-    visibility: visible;
-    background-color: red;
+@media screen and (min-width: 520px){
+    h1{
+        font-size:50px;
+    }
 }

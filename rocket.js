@@ -40,12 +40,12 @@ var changeState = function (state) {
         var success = setTimeout(function () {
             var randomNumber = Math.round(Math.random() * 10);
             console.log(randomNumber);
-            if (randomNumber > 5) {
+            if (randomNumber > 9) {
                 changeState(4);
             } else {
                 changeState(5);
             }
-        },2000);
+        },1500);
         /*to let the rocket continue to fly you have to add the following styling (if success):
             body.body-state4 .rocket{bottom:1050px;}
         If not the rocket will come down after the set amount of time given to the setTimeout method (2s)*/

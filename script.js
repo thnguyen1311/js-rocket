@@ -9,7 +9,7 @@ var doCoolStuff = function(){
 } 
 
 var disappear = setTimeout(function(){
-    location.href="rocket-m.html";
+    location.href="rocket.html";
 },5000);
 
 var car ={

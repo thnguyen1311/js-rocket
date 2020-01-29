@@ -21,11 +21,12 @@ a{
     transition: visibility 1s ease;
     color: #4f4ebe;
     font-weight:bold;
-    animation: up-down 2s infinite;
-    animation-timing-function: ease-in;
+    animation: up-down 0.75s infinite alternate;
+/*    to make it run go from 0% => 100% and 100% => 0% instead of jumping from 100% to 0%, set the animation-direction: alternate */
+    animation-timing-function: linear;
 }
 @keyframes up-down{
-    from{
+    0%{
         color: #6c6cb7;
     }
     50%{
